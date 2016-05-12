@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:orientation="vertical"
+tools:context="demo1.baros.calculator.MainActivity">
+
+<EditText android:id="@+id/text_op1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="numberDecimal"/>
+
+<EditText android:id="@+id/text_op2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="numberDecimal"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button android:id="@+id/operation_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:onClick="onAdd"/>
+
+    <Button android:id="@+id/operation_sub_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sub"
+        android:layout_toRightOf="@id/operation_add_button"
+        android:layout_toEndOf="@id/operation_add_button"
+        android:onClick="onSub"/>
+
+    <Button android:id="@+id/operation_div_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Div"
+        android:layout_below="@id/operation_add_button"
+        android:onClick="onDiv"/>
+
+    <Button android:id="@+id/operation_mul_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mul"
+        android:layout_below="@id/operation_add_button"
+        android:layout_toRightOf="@id/operation_add_button"
+        android:layout_toEndOf="@id/operation_add_button"
+        android:onClick="onMul"/>
+
+</RelativeLayout>
+
+<TextView android:id="@+id/txt_result"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/activity_vertical_margin"/>
+</LinearLayout>
